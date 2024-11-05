@@ -1,0 +1,16 @@
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+
+def transaction_analysis(transactions):
+    # Load ML model
+    model = RandomForestClassifier()
+
+    # Preprocess transactions data
+    df = pd.DataFrame(transactions)
+
+    # Make predictions
+    predictions = model.predict(df)
+
+    return predictions
+
+

@@ -1,0 +1,21 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EcoFin</title>
+</head>
+<body>
+  <h1>EcoFin</h1>
+  <form>
+    <label>Transaction Amount:</label>
+    <input type="number" id="amount" />
+    <button id="analyze">Analyze</button>
+  </form>
+  <div id="results"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

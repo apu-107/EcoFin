@@ -1,0 +1,26 @@
+- Controller: EcoFinController.php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Vultr\Vultr;
+
+class EcoFinController extends Controller
+{
+    public function index(Request $request)
+    {
+        // Display user dashboard
+        return view('dashboard');
+    }
+
+    public function analyzeTransactions(Request $request)
+    {
+        // Analyze user transactions using Vultr's ML models
+        $vultr = new Vultr();
+        $mlModel = $vultr->getModel('transaction-analysis');
+        $results = $mlModel->predict($request->transactions);
+
+        // Return personalized sustainable investment recommendations
+        return response()->json($results);
+    }
+}

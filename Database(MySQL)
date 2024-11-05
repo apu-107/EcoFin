@@ -1,0 +1,24 @@
+- ecofin_database.sql
+
+CREATE TABLE users (
+  id INT PRIMARY KEY,
+  name VARCHAR(255),
+  email VARCHAR(255)
+);
+
+CREATE TABLE transactions (
+  id INT PRIMARY KEY,
+  user_id INT,
+  transaction_date DATE,
+  amount DECIMAL(10, 2),
+  category VARCHAR(255)
+);
+
+CREATE TABLE sustainable_investments (
+  id INT PRIMARY KEY,
+  user_id INT,
+  investment_date DATE,
+  amount DECIMAL(10, 2),
+  investment_type VARCHAR(255)
+);
+
